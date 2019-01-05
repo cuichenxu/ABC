@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> 计算机</title>  
+  <script type="text/javascript">
+   function count(){
+        var num1=document.getElementById("txt1").value;
+        var num2=document.getElementById("txt2").value;
+        var num3=document.getElementById("select").value;
+        var num4;
+                switch(num3)
+                {
+                case "+":
+                num4=parseInt(num1)+parseInt(num2)
+                 break;
+                 case "-":
+                 num4=parseInt(num1)-parseInt(num2)
+                 break;
+                 case "*":
+                 num4=parseInt(num1)*parseInt(num2)
+                 break;
+                default:
+                 num4=parseInt(num1)/parseInt(num2); 
+                  }
+                 document.getElementById("fruit").value=num4;
+                }
+
+  </script> 
+ </head> 
+ <body>
+   <input type='text' id="txt1" /> 
+   <select id='select'>
+		<option value='+'>+</option>
+		<option value="-">-</option>
+		<option value="*">*</option>
+		<option value="/">/</option>
+   </select>
+   <input type='text' id='txt2' /> 
+   <input type='button' value=' = '  onclick="count()"/>
+   <input type='text' id='fruit' />   
+ </body>
+</html>
